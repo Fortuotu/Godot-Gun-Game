@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=9 format=3 uid="uid://dj7y2bfegoonl"]
 
 [ext_resource type="Script" uid="uid://chqivfjod75of" path="res://main.gd" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://player.tscn" id="2_tlwt5"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://door.tscn" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://portal.tscn" id="6_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://dvo53wr5klck5" path="res://pause_menu.tscn" id="7_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://bgcm1v5ethk8o" path="res://replenish.tscn" id="8_gbfbk"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fj7yv")
@@ -435,6 +436,23 @@ position = Vector2(-97.8, -282)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_pkg7o")]
+
+[node name="Replenishers" type="Node2D" parent="."]
+
+[node name="Replenish" parent="Replenishers" instance=ExtResource("8_gbfbk")]
+position = Vector2(2434, 140)
+
+[node name="Replenish2" parent="Replenishers" instance=ExtResource("8_gbfbk")]
+position = Vector2(199, 246)
+
+[node name="Replenish3" parent="Replenishers" instance=ExtResource("8_gbfbk")]
+position = Vector2(933, -260)
+
+[node name="Replenish4" parent="Replenishers" instance=ExtResource("8_gbfbk")]
+position = Vector2(3201, 146)
+
+[node name="Replenish5" parent="Replenishers" instance=ExtResource("8_gbfbk")]
+position = Vector2(2806, 118)
 
 [editable path="Portals/Portal2"]
 [editable path="Portals/Portal"]
