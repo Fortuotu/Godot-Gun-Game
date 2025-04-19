@@ -5,7 +5,7 @@ class_name Player extends CharacterBody2D
 
 @onready var gun_dist = global_position.distance_to($Gun.global_position)
 var gun_force = 780.0
-const GUN_INITIAL_AMMO = 5
+const GUN_INITIAL_AMMO = 2
 var gun_ammo = GUN_INITIAL_AMMO
 
 func _get_input():
