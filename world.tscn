@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://door.tscn" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://portal.tscn" id="6_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://dvo53wr5klck5" path="res://pause_menu.tscn" id="7_pkg7o"]
-[ext_resource type="PackedScene" uid="uid://bgcm1v5ethk8o" path="res://replenish.tscn" id="8_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://b1ecpeeum3q2e" path="res://replenish.tscn" id="8_gbfbk"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fj7yv")
@@ -29,7 +29,7 @@ position = Vector2(64, 264)
 position = Vector2(448, 264)
 
 [node name="Block96" parent="Blocks" instance=ExtResource("3_aqk2v")]
-position = Vector2(448, 424)
+position = Vector2(446, 769)
 scale = Vector2(1, 1.5)
 
 [node name="Block118" parent="Blocks" instance=ExtResource("3_aqk2v")]
@@ -434,6 +434,7 @@ scale = Vector2(5, 5)
 position = Vector2(-97.8, -282)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_pkg7o")]
 
