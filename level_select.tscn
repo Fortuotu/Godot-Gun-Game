@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpovrbvc5qp5n"]
+
+[ext_resource type="Script" uid="uid://cat5ti2plbdyy" path="res://level_select.gd" id="1_il3u1"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_il3u1")
+
+[node name="Level1" type="Button" parent="."]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 73.0
+text = "1
+"
+
+[node name="Level2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_right = 216.0
+offset_bottom = 73.0
+text = "2
+"
+
+[node name="Level3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_right = 324.0
+offset_bottom = 73.0
+text = "3"
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
