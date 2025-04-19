@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=10 format=3 uid="uid://dj7y2bfegoonl"]
 
 [ext_resource type="Script" uid="uid://chqivfjod75of" path="res://main.gd" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://player.tscn" id="2_tlwt5"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://portal.tscn" id="6_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://dvo53wr5klck5" path="res://pause_menu.tscn" id="7_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://b1ecpeeum3q2e" path="res://replenish.tscn" id="8_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://0kquv54roee0" path="res://bullets_label.tscn" id="8_ioo17"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fj7yv")
@@ -434,9 +435,10 @@ scale = Vector2(5, 5)
 position = Vector2(-97.8, -282)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_pkg7o")]
+
+[node name="bullets" parent="CanvasLayer" instance=ExtResource("8_ioo17")]
 
 [node name="Replenishers" type="Node2D" parent="."]
 
