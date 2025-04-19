@@ -5,7 +5,7 @@ class_name Player extends CharacterBody2D
 
 @onready var gun_dist = global_position.distance_to($Gun.global_position)
 var gun_force = 780.0
-const GUN_INITIAL_AMMO = 2
+const GUN_INITIAL_AMMO = 999
 var gun_ammo = GUN_INITIAL_AMMO
 
 func _get_input():
@@ -37,7 +37,7 @@ func _make_gun_rotation():
 		$Gun.scale = Vector2(1.0, 1.0)
 
 func _shoot():
-	if gun_ammo == 0: # pole kuule enam :(
+	if gun_ammo == 0:
 		print("Out of ammo")
 		return
 	
