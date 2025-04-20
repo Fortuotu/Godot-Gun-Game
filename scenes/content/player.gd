@@ -1,5 +1,12 @@
 class_name Player extends CharacterBody2D
 
+static var _this_scene = preload("res://scenes/content/player.tscn")
+
+static func create(global_spawn_location: Vector2) -> Player:
+	var player = _this_scene.instantiate()
+	player.global_position = global_spawn_location
+	return player
+
 @export var speed = 400
 @export var gravity = 980
 
