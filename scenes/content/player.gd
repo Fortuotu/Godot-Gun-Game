@@ -18,6 +18,8 @@ static var gun_ammo = GUN_INITIAL_AMMO
 
 var _spawn_location: Vector2
 
+var death_sound = preload("res://assets/sounds/player_death.mp3")
+
 func _enter_tree() -> void:
 	Global.register_player(self)
 
@@ -59,3 +61,8 @@ func _shoot():
 	velocity = -angle_vec * gun_force
 	
 	gun_ammo -= 1
+
+func on_death():
+	if !$AudioStreamPlayer2D.is_playing():
+		$AudioStreamPlayer2D.stream = death_sound
+		$AudioStreamPlayer2D.play()

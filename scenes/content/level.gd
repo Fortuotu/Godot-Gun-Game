@@ -25,3 +25,4 @@ func respawn_player():
 	player.global_position = player_spawn.global_position
 	player.gun_ammo = Player.GUN_INITIAL_AMMO
 	player.velocity = Vector2(0, 0)
+	player.on_death()
