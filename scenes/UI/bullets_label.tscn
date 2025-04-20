@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://0kquv54roee0"]
 
-[ext_resource type="Script" uid="uid://bgfok7rt3jrem" path="res://label.gd" id="1_ssj2g"]
+[ext_resource type="Script" uid="uid://bgfok7rt3jrem" path="res://scenes/UI/label.gd" id="1_ssj2g"]
+
 
 [node name="bullets" type="Control"]
 layout_mode = 3

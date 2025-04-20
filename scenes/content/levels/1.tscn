@@ -1,17 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=8 format=3 uid="uid://dj7y2bfegoonl"]
 
-[ext_resource type="Script" uid="uid://chqivfjod75of" path="res://main.gd" id="1_344tg"]
-[ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://player.tscn" id="2_1diu1"]
-[ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://block.tscn" id="3_j0jco"]
-[ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://button.tscn" id="4_gprjd"]
-[ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://door.tscn" id="5_6j3rm"]
-[ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://portal.tscn" id="6_sjybn"]
-[ext_resource type="PackedScene" uid="uid://dvo53wr5klck5" path="res://pause_menu.tscn" id="7_s0nv6"]
-[ext_resource type="PackedScene" uid="uid://0kquv54roee0" path="res://bullets_label.tscn" id="8_ub3y0"]
-[ext_resource type="PackedScene" uid="uid://b1ecpeeum3q2e" path="res://replenish.tscn" id="9_u8tc4"]
+[ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://scenes/content/player.tscn" id="2_1diu1"]
+[ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://scenes/content/block.tscn" id="3_j0jco"]
+[ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://scenes/content/button.tscn" id="4_gprjd"]
+[ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://scenes/content/door.tscn" id="5_6j3rm"]
+[ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://scenes/content/portal.tscn" id="6_sjybn"]
+[ext_resource type="PackedScene" uid="uid://d0eb6v5gkxpot" path="res://scenes/content/level.tscn" id="8_725xe"]
+[ext_resource type="PackedScene" uid="uid://b1ecpeeum3q2e" path="res://scenes/content/replenish.tscn" id="9_u8tc4"]
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_344tg")
 metadata/_edit_vertical_guides_ = [-2816.0]
 metadata/_edit_horizontal_guides_ = [-749.0]
 
@@ -30,7 +27,7 @@ position = Vector2(64, 264)
 position = Vector2(448, 264)
 
 [node name="Block96" parent="Blocks" instance=ExtResource("3_j0jco")]
-position = Vector2(446, 769)
+position = Vector2(449, 424)
 scale = Vector2(1, 1.5)
 
 [node name="Block118" parent="Blocks" instance=ExtResource("3_j0jco")]
@@ -434,12 +431,6 @@ scale = Vector2(5, 5)
 [node name="Destination" parent="Portals/Portal" index="3"]
 position = Vector2(-97.8, -282)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_s0nv6")]
-
-[node name="bullets" parent="CanvasLayer" instance=ExtResource("8_ub3y0")]
-
 [node name="Replenishers" type="Node2D" parent="."]
 
 [node name="Replenish" parent="Replenishers" instance=ExtResource("9_u8tc4")]
@@ -456,6 +447,8 @@ position = Vector2(3201, 146)
 
 [node name="Replenish5" parent="Replenishers" instance=ExtResource("9_u8tc4")]
 position = Vector2(2806, 118)
+
+[node name="Level" parent="." instance=ExtResource("8_725xe")]
 
 [editable path="Portals/Portal2"]
 [editable path="Portals/Portal"]

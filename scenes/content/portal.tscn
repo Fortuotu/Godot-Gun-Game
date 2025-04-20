@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cdhxkntegonak"]
 
-[ext_resource type="Texture2D" uid="uid://bis1aakh31qlf" path="res://Dimensional_Portal.png" id="1_0r486"]
-[ext_resource type="Script" uid="uid://cuel8kb6hpxvn" path="res://portal.gd" id="1_ef3v5"]
+[ext_resource type="Texture2D" uid="uid://bis1aakh31qlf" path="res://assets/sprites/Dimensional_Portal.png" id="1_0r486"]
+[ext_resource type="Script" uid="uid://cuel8kb6hpxvn" path="res://scenes/content/portal.gd" id="1_ef3v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef3v5"]
 size = Vector2(9, 30)

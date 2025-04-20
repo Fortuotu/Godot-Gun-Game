@@ -8,16 +8,16 @@ var gun_force = 780.0
 const GUN_INITIAL_AMMO = 2
 static var gun_ammo = GUN_INITIAL_AMMO
 
-func _get_input():
-	if Input.is_action_just_pressed("shoot"):
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
 		_shoot()
+		get_viewport().set_input_as_handled()
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	
 	velocity *= 0.99
 	
-	_get_input()
 	_make_gun_rotation()
 	move_and_slide()
 	

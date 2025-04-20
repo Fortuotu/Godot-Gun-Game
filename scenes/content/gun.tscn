@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dvpv1yphj24f2"]
 
-[ext_resource type="Texture2D" uid="uid://c51bmw3ewbyob" path="res://gun.png" id="1_vk1bi"]
+[ext_resource type="Texture2D" uid="uid://c51bmw3ewbyob" path="res://assets/sprites/gun.png" id="1_vk1bi"]
 
 [node name="Gun" type="Node2D"]
 
