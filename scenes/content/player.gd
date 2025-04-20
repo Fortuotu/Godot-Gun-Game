@@ -22,7 +22,6 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if (is_on_floor() && gun_ammo != GUN_INITIAL_AMMO):
-		print("Gave player " + str(GUN_INITIAL_AMMO) + " ammo")
 		gun_ammo = GUN_INITIAL_AMMO
 
 func _make_gun_rotation():
@@ -38,12 +37,9 @@ func _make_gun_rotation():
 
 func _shoot():
 	if gun_ammo == 0:
-		print("Out of ammo")
 		return
 	
 	var angle_vec = (get_global_mouse_position() - global_position).normalized()
 	velocity = -angle_vec * gun_force
 	
 	gun_ammo -= 1
-	
-	print("Ammo left: ", str(gun_ammo))
