@@ -4,7 +4,7 @@ class_name Player extends CharacterBody2D
 @export var gravity = 980
 
 @onready var gun_dist = global_position.distance_to($Gun.global_position)
-var gun_force = 780.0
+var gun_force = 800.0
 const GUN_INITIAL_AMMO = 2
 static var gun_ammo = GUN_INITIAL_AMMO
 

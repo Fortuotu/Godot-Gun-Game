@@ -16,7 +16,7 @@ metadata/_edit_horizontal_guides_ = [-749.0]
 [node name="Player" parent="." instance=ExtResource("2_1diu1")]
 position = Vector2(632, 248)
 
-[node name="Blocks" type="Node2D" parent="."]
+[node name="Blocks" type="Node" parent="."]
 
 [node name="Block" parent="Blocks" instance=ExtResource("3_j0jco")]
 position = Vector2(64, 584)
@@ -374,7 +374,7 @@ position = Vector2(3648, -312)
 [node name="Block90" parent="Blocks" instance=ExtResource("3_j0jco")]
 position = Vector2(3520, -312)
 
-[node name="Buttons" type="Node2D" parent="."]
+[node name="Buttons" type="Node" parent="."]
 
 [node name="Button" parent="Buttons" node_paths=PackedStringArray("door") instance=ExtResource("4_gprjd")]
 position = Vector2(832, 504)
@@ -398,7 +398,7 @@ rotation = -1.5708
 scale = Vector2(6, 6)
 door = NodePath("../../Doors/Door")
 
-[node name="Doors" type="Node2D" parent="."]
+[node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("5_6j3rm")]
 position = Vector2(64, 425)
@@ -416,7 +416,7 @@ scale = Vector2(6.4, 9.5)
 position = Vector2(2240, 425)
 scale = Vector2(6.4, 9.5)
 
-[node name="Portals" type="Node2D" parent="."]
+[node name="Portals" type="Node" parent="."]
 
 [node name="Portal2" parent="Portals" instance=ExtResource("6_sjybn")]
 position = Vector2(1863, -966)
@@ -432,7 +432,7 @@ scale = Vector2(5, 5)
 [node name="Destination" parent="Portals/Portal" index="3"]
 position = Vector2(-97.8, -282)
 
-[node name="Replenishers" type="Node2D" parent="."]
+[node name="Replenishers" type="Node" parent="."]
 
 [node name="Replenish" parent="Replenishers" instance=ExtResource("9_u8tc4")]
 position = Vector2(2434, 140)
@@ -460,6 +460,21 @@ scale = Vector2(0.305, 0.305)
 [node name="Spike2" parent="Spikes" instance=ExtResource("8_573dp")]
 position = Vector2(1812, 452)
 scale = Vector2(0.305, 0.305)
+
+[node name="Spike3" parent="Spikes" instance=ExtResource("8_573dp")]
+position = Vector2(2515, 299)
+rotation = -1.57079
+scale = Vector2(0.2, 0.2)
+
+[node name="Spike4" parent="Spikes" instance=ExtResource("8_573dp")]
+position = Vector2(2515, 363)
+rotation = -1.57079
+scale = Vector2(0.2, 0.2)
+
+[node name="Spike5" parent="Spikes" instance=ExtResource("8_573dp")]
+position = Vector2(2515, 426)
+rotation = -1.57079
+scale = Vector2(0.2, 0.2)
 
 [editable path="Portals/Portal2"]
 [editable path="Portals/Portal"]
