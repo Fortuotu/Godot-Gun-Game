@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1dwl5wr7x85u"]
+
+[ext_resource type="Script" uid="uid://dayfps5gcmems" path="res://scenes/UI/bullet_overlay.gd" id="1_ao3w3"]
+[ext_resource type="FontFile" uid="uid://va1mro4qgj5f" path="res://assets/BruceForeverRegular-X3jd2.ttf" id="1_sh55t"]
+
+[node name="BulletOverlay" type="Label"]
+theme_override_fonts/font = ExtResource("1_sh55t")
+theme_override_font_sizes/font_size = 32
+script = ExtResource("1_ao3w3")
