@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://cnixgr8h2vdb5" path="res://scenes/content/level.gd" id="1_bexhn"]
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node"]
 script = ExtResource("1_bexhn")

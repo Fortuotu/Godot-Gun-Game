@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=120
 config/icon="res://assets/sprites/icon.svg"
 
+[autoload]
+
+Global="*res://scenes/global.gd"
+
 [global_group]
 
 player=""

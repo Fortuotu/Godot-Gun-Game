@@ -2,10 +2,11 @@ class_name Player extends CharacterBody2D
 
 static var _this_scene = preload("res://scenes/content/player.tscn")
 
-static func create(global_spawn_location: Vector2) -> Player:
-	var player = _this_scene.instantiate()
-	player.global_position = global_spawn_location
-	return player
+static func create(spawn_location: Vector2):
+	var inst = _this_scene.instantiate()
+	inst._spawn_location = spawn_location
+	inst.global_position = spawn_location
+	return inst
 
 @export var speed = 400
 @export var gravity = 980
@@ -14,6 +15,14 @@ static func create(global_spawn_location: Vector2) -> Player:
 var gun_force = 800.0
 const GUN_INITIAL_AMMO = 2
 static var gun_ammo = GUN_INITIAL_AMMO
+
+var _spawn_location: Vector2
+
+func _enter_tree() -> void:
+	Global.register_player(self)
+
+func _exit_tree() -> void:
+	Global.deregister_player()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot"):

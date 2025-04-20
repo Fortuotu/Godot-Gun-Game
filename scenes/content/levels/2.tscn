@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhrocajx32lvs"]
+
+[ext_resource type="PackedScene" uid="uid://d0eb6v5gkxpot" path="res://scenes/content/level.tscn" id="1_p8i8r"]
+[ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://scenes/content/block.tscn" id="2_0l2s8"]
+
+[node name="Container" type="Node"]
+
+[node name="Level" parent="." node_paths=PackedStringArray("player_spawn") instance=ExtResource("1_p8i8r")]
+player_spawn = NodePath("../PlayerSpawn")
+
+[node name="Blocks" type="Node" parent="Level"]
+
+[node name="Block" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
+position = Vector2(469, 385)
+
+[node name="Block2" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
+position = Vector2(727, 382)
+
+[node name="Block3" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
+position = Vector2(598, 382)
+
+[node name="Block4" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
+position = Vector2(338, 383)
+
+[node name="Block5" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
+position = Vector2(213, 382)
+
+[node name="Block6" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
+position = Vector2(85, 383)
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(417, 101)
