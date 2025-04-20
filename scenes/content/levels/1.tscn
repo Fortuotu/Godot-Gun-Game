@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=9 format=3 uid="uid://dj7y2bfegoonl"]
 
 [ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://scenes/content/player.tscn" id="2_1diu1"]
 [ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://scenes/content/block.tscn" id="3_j0jco"]
 [ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://scenes/content/button.tscn" id="4_gprjd"]
 [ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://scenes/content/door.tscn" id="5_6j3rm"]
 [ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://scenes/content/portal.tscn" id="6_sjybn"]
+[ext_resource type="PackedScene" uid="uid://b5rk3owh20w6s" path="res://scenes/content/spike.tscn" id="8_573dp"]
 [ext_resource type="PackedScene" uid="uid://d0eb6v5gkxpot" path="res://scenes/content/level.tscn" id="8_725xe"]
 [ext_resource type="PackedScene" uid="uid://b1ecpeeum3q2e" path="res://scenes/content/replenish.tscn" id="9_u8tc4"]
 
@@ -449,6 +450,16 @@ position = Vector2(3201, 146)
 position = Vector2(2806, 118)
 
 [node name="Level" parent="." instance=ExtResource("8_725xe")]
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spike" parent="Spikes" instance=ExtResource("8_573dp")]
+position = Vector2(1614, 455)
+scale = Vector2(0.305, 0.305)
+
+[node name="Spike2" parent="Spikes" instance=ExtResource("8_573dp")]
+position = Vector2(1812, 452)
+scale = Vector2(0.305, 0.305)
 
 [editable path="Portals/Portal2"]
 [editable path="Portals/Portal"]

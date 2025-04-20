@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5rk3owh20w6s"]
+
+[ext_resource type="Texture2D" uid="uid://dm6sp3mlsi1j4" path="res://assets/sprites/spike.png" id="1_jrc7i"]
+[ext_resource type="Script" uid="uid://b8mxqsn7e4m0e" path="res://scenes/content/spike.gd" id="1_ra10b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ra10b"]
+radius = 36.0
+height = 268.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a11h4"]
+radius = 53.1507
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h58lm"]
+radius = 54.0
+
+[node name="Spike" type="Area2D"]
+script = ExtResource("1_ra10b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jrc7i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 10)
+shape = SubResource("CapsuleShape2D_ra10b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(45, 156)
+shape = SubResource("CircleShape2D_a11h4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-59, 156)
+shape = SubResource("CircleShape2D_h58lm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
