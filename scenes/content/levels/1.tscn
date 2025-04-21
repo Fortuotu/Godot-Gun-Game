@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=10 format=3 uid="uid://dj7y2bfegoonl"]
 
 [ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://scenes/content/block.tscn" id="3_j0jco"]
 [ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://scenes/content/button.tscn" id="4_gprjd"]
@@ -6,7 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://scenes/content/portal.tscn" id="6_sjybn"]
 [ext_resource type="PackedScene" uid="uid://b5rk3owh20w6s" path="res://scenes/content/spike.tscn" id="8_573dp"]
 [ext_resource type="PackedScene" uid="uid://d0eb6v5gkxpot" path="res://scenes/content/level.tscn" id="8_725xe"]
+[ext_resource type="PackedScene" uid="uid://bk158wuxieq4u" path="res://scenes/content/laser_shooter.tscn" id="8_o3q8j"]
 [ext_resource type="PackedScene" uid="uid://b1ecpeeum3q2e" path="res://scenes/content/replenish.tscn" id="9_u8tc4"]
+
+[sub_resource type="Environment" id="Environment_573dp"]
+background_mode = 3
+glow_enabled = true
+glow_hdr_threshold = 1.5
 
 [node name="Container" type="Node"]
 metadata/_edit_vertical_guides_ = [-2816.0]
@@ -473,8 +479,17 @@ scale = Vector2(6.4, 9.5)
 position = Vector2(2240, 425)
 scale = Vector2(6.4, 9.5)
 
+[node name="Lasers" type="Node" parent="Level"]
+
+[node name="LaserShooter" parent="Level/Lasers" instance=ExtResource("8_o3q8j")]
+position = Vector2(2112, 134)
+rotation = 1.57079
+
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(648, 271)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_573dp")
 
 [editable path="Level/Portals/Portal2"]
 [editable path="Level/Portals/Portal"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhrocajx32lvs"]
+[gd_scene load_steps=4 format=3 uid="uid://bhrocajx32lvs"]
 
 [ext_resource type="PackedScene" uid="uid://d0eb6v5gkxpot" path="res://scenes/content/level.tscn" id="1_p8i8r"]
 [ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://scenes/content/block.tscn" id="2_0l2s8"]
+[ext_resource type="PackedScene" uid="uid://bvi2s7fb40f70" path="res://scenes/content/laser.tscn" id="3_0l2s8"]
 
 [node name="Container" type="Node"]
 
@@ -11,7 +12,7 @@ player_spawn = NodePath("../PlayerSpawn")
 [node name="Blocks" type="Node" parent="Level"]
 
 [node name="Block" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
-position = Vector2(469, 385)
+position = Vector2(466, 383)
 
 [node name="Block2" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
 position = Vector2(727, 382)
@@ -23,10 +24,14 @@ position = Vector2(598, 382)
 position = Vector2(338, 383)
 
 [node name="Block5" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
-position = Vector2(213, 382)
+position = Vector2(210, 383)
 
 [node name="Block6" parent="Level/Blocks" instance=ExtResource("2_0l2s8")]
 position = Vector2(85, 383)
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(417, 101)
+
+[node name="Laser" parent="." instance=ExtResource("3_0l2s8")]
+position = Vector2(278, 64)
+target_position = Vector2(0, 600)
