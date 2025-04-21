@@ -89,10 +89,6 @@ position = Vector2(64, 264)
 [node name="Block93" parent="Level/Blocks" instance=ExtResource("3_j0jco")]
 position = Vector2(448, 264)
 
-[node name="Block96" parent="Level/Blocks" instance=ExtResource("3_j0jco")]
-position = Vector2(449, 424)
-scale = Vector2(1, 1.5)
-
 [node name="Block118" parent="Level/Blocks" instance=ExtResource("3_j0jco")]
 position = Vector2(64, -664)
 scale = Vector2(1, 1.5)
@@ -484,6 +480,16 @@ scale = Vector2(6.4, 9.5)
 [node name="LaserShooter" parent="Level/Lasers" instance=ExtResource("8_o3q8j")]
 position = Vector2(2112, 134)
 rotation = 1.57079
+scale = Vector2(2.135, 2.135)
+LASER_INTERVAL = 3.0
+LASER_DURATION = 0.2
+
+[node name="LaserShooter2" parent="Level/Lasers" instance=ExtResource("8_o3q8j")]
+position = Vector2(446, 418)
+rotation = -1.57079
+scale = Vector2(3.455, 1.98)
+LASER_INTERVAL = 6.0
+LASER_DURATION = 2.0
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(648, 271)

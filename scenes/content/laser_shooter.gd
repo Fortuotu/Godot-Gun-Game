@@ -2,8 +2,8 @@ class_name LaserShooter extends StaticBody2D
 
 var laser_active: bool = false
 
-const LASER_INTERVAL = 0.5
-const LASER_DURATION = 1.0
+@export var LASER_INTERVAL = 0.5
+@export var LASER_DURATION = 1.0
 
 func _configure_laser():
 	$Laser.target_position *= 1000
