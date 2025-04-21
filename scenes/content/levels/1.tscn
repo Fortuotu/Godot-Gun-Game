@@ -491,6 +491,9 @@ scale = Vector2(3.455, 1.98)
 LASER_INTERVAL = 6.0
 LASER_DURATION = 2.0
 
+[node name="Replenish" parent="Level" instance=ExtResource("9_u8tc4")]
+position = Vector2(1256, -244)
+
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(648, 271)
 
