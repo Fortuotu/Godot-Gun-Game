@@ -18,9 +18,23 @@ position = Vector2(2.38419e-06, 2.38419e-07)
 scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("1_knd36")
 
-[node name="Laser" parent="." instance=ExtResource("3_82go1")]
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Lasers" type="Node2D" parent="."]
+
+[node name="NorthLaser" parent="Lasers" instance=ExtResource("3_82go1")]
+position = Vector2(0, -31)
+rotation = -3.14159
+
+[node name="SouthLaser" parent="Lasers" instance=ExtResource("3_82go1")]
 position = Vector2(0, 31)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="EastLaser" parent="Lasers" instance=ExtResource("3_82go1")]
+position = Vector2(31, 0)
+rotation = -1.57079
+
+[node name="WestLaser" parent="Lasers" instance=ExtResource("3_82go1")]
+position = Vector2(-31, 0)
+rotation = 1.57079
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-extends RayCast2D
+class_name Laser extends RayCast2D
 
 @onready var activated_ray_size: float = $Line2D.width
 
